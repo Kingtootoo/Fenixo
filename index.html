@@ -9,53 +9,63 @@
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
+            margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            overflow: hidden;
         }
-        .search-bar {
-            display: flex;
-            width: 60%;
-            margin-bottom: 20px;
-        }
-        input {
-            flex-grow: 1;
-            padding: 10px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-        }
-        button {
-            margin-left: 10px;
-            padding: 10px;
-            font-size: 16px;
-            background-color: orange;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .menu {
+        .top-bar {
             position: absolute;
             top: 10px;
-            right: 10px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        .menu {
             cursor: pointer;
+            padding: 10px;
+            background-color: orange;
+            border-radius: 5px;
         }
         .dropdown {
             display: none;
             position: absolute;
-            right: 0;
+            right: 10px;
             background: #222;
             border-radius: 5px;
             padding: 10px;
+            z-index: 10;
         }
         .dropdown a {
             display: block;
             color: white;
             text-decoration: none;
             padding: 5px 0;
+        }
+        .ai-button {
+            position: absolute;
+            bottom: 50px;
+            right: 20px;
+            background-color: orange;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
         }
         .footer {
             position: absolute;
@@ -72,18 +82,18 @@
     </style>
 </head>
 <body>
-    <h1>Fenixo</h1>
-    <div class="search-bar">
-        <input type="text" id="search" placeholder="Search Google...">
-        <button onclick="searchGoogle()">Search</button>
+    <div class="top-bar">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search Google...">
+        </div>
+        <div class="menu" onclick="toggleMenu()">⋮</div>
     </div>
     
-    <button onclick="newTab()">New Tab</button>
-    
-    <div class="menu" onclick="toggleMenu()">⋮</div>
     <div class="dropdown" id="menuDropdown">
         <a href="#" onclick="downloadFenixo()">Download Fenixo Offline</a>
     </div>
+    
+    <div class="ai-button" onclick="openAI()">🤖</div>
     
     <div class="footer">
         <img src="github-icon.png" alt="GitHub" onclick="window.location.href='https://github.com/kingtootoo'">
@@ -91,21 +101,15 @@
     </div>
     
     <script>
-        function searchGoogle() {
-            let query = document.getElementById('search').value;
-            if (query) {
-                window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-            }
-        }
-        function newTab() {
-            window.open('Fenixo://new-tab', '_blank');
-        }
         function toggleMenu() {
             let dropdown = document.getElementById('menuDropdown');
             dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
         }
         function downloadFenixo() {
             alert('Downloading Fenixo Offline...');
+        }
+        function openAI() {
+            alert('Fenixo AI (Experimental) coming soon!');
         }
     </script>
 </body>
