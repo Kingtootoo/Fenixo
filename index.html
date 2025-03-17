@@ -8,17 +8,17 @@
         body {
             background-color: black;
             color: white;
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            font-family: Arial, sans-serif;
         }
-        .search-container {
+        .search-bar {
             display: flex;
-            align-items: center;
             width: 60%;
+            margin-bottom: 20px;
         }
         input {
             flex-grow: 1;
@@ -37,6 +37,26 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .menu {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: #222;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .dropdown a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 5px 0;
+        }
         .footer {
             position: absolute;
             bottom: 20px;
@@ -53,16 +73,23 @@
 </head>
 <body>
     <h1>Fenixo</h1>
-    <div class="search-container">
+    <div class="search-bar">
         <input type="text" id="search" placeholder="Search Google...">
         <button onclick="searchGoogle()">Search</button>
+    </div>
+    
+    <button onclick="newTab()">New Tab</button>
+    
+    <div class="menu" onclick="toggleMenu()">⋮</div>
+    <div class="dropdown" id="menuDropdown">
+        <a href="#" onclick="downloadFenixo()">Download Fenixo Offline</a>
     </div>
     
     <div class="footer">
         <img src="github-icon.png" alt="GitHub" onclick="window.location.href='https://github.com/kingtootoo'">
         <span>Made by Kingtootoo</span>
     </div>
-
+    
     <script>
         function searchGoogle() {
             let query = document.getElementById('search').value;
@@ -70,9 +97,16 @@
                 window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
             }
         }
+        function newTab() {
+            window.open('Fenixo://new-tab', '_blank');
+        }
+        function toggleMenu() {
+            let dropdown = document.getElementById('menuDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+        function downloadFenixo() {
+            alert('Downloading Fenixo Offline...');
+        }
     </script>
-</body>
-</html>
-
 </body>
 </html>
