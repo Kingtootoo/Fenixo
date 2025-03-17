@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fenixo Proxy</title>
+    <title>Fenixo</title>
     <style>
         body {
             background-color: black;
@@ -15,31 +15,54 @@
             height: 100vh;
             font-family: Arial, sans-serif;
         }
-        input {
+        .search-container {
+            display: flex;
+            align-items: center;
             width: 60%;
+        }
+        input {
+            flex-grow: 1;
             padding: 10px;
             font-size: 18px;
             border: none;
             border-radius: 5px;
         }
         button {
-            margin-top: 10px;
+            margin-left: 10px;
             padding: 10px;
             font-size: 16px;
-            background-color: #333;
+            background-color: orange;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .footer img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <h1>Fenixo Proxy</h1>
-    <input type="text" id="search" placeholder="Search Google...">
-    <button onclick="searchGoogle()">Search</button>
-    <button onclick="newTab()">New Tab</button>
+    <h1>Fenixo</h1>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search Google...">
+        <button onclick="searchGoogle()">Search</button>
+    </div>
     
+    <div class="footer">
+        <img src="github-icon.png" alt="GitHub" onclick="window.location.href='https://github.com/kingtootoo'">
+        <span>Made by Kingtootoo</span>
+    </div>
+
     <script>
         function searchGoogle() {
             let query = document.getElementById('search').value;
@@ -47,10 +70,9 @@
                 window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
             }
         }
-        
-        function newTab() {
-            window.open(window.location.href, '_blank');
-        }
     </script>
+</body>
+</html>
+
 </body>
 </html>
