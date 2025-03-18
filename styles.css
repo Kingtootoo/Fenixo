@@ -2,145 +2,84 @@
 
 /* Global styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 button {
-  background-color: #FF5722; /* Orange background for buttons */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  margin: 5px;
+    background-color: #FF5722; /* Orange for buttons */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 button:hover {
-  background-color: #FF7043; /* Lighter orange for hover effect */
+    background-color: #FF7043; /* Hover effect */
 }
 
 button:active {
-  background-color: #F4511E; /* Darker orange for active effect */
+    background-color: #F4511E; /* Active effect */
 }
 
 /* Dark Mode */
 body.dark-mode {
-  background-color: #121212;
-  color: #fff;
+    background-color: #121212;
+    color: #fff;
 }
 
 body.dark-mode button {
-  background-color: #333;
-  color: #fff;
+    background-color: #333;
+    color: #fff;
 }
 
-body.dark-mode button:hover {
-  background-color: #555;
-}
-
-/* Search bar and buttons */
+/* Input and button layout */
 #search-bar {
-  width: 300px;
-  padding: 10px;
-  font-size: 16px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 #search-button {
-  background-color: #4CAF50;
+    background-color: #4CAF50;
 }
 
 #search-button:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 /* Settings Modal */
 #settings-modal {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #settings-modal button {
-  background-color: #f44336; /* Red for Close button */
+    background-color: #f44336; /* Red for Close button */
 }
 
 #settings-modal button:hover {
-  background-color: #e53935;
-}
-
-/* Navigation buttons (Back, Forward, Refresh) */
-#back-button, #forward-button, #refresh-button {
-  background-color: #2196F3; /* Blue for navigation */
-}
-
-#back-button:hover, #forward-button:hover, #refresh-button:hover {
-  background-color: #0b7dda;
-}
-
-#back-button:active, #forward-button:active, #refresh-button:active {
-  background-color: #0a6bb5;
-}
-
-/* Home button */
-#home-button {
-  background-color: #f44336; /* Red for Home button */
-}
-
-#home-button:hover {
-  background-color: #e53935;
-}
-
-/* Optional: Add more styles for specific buttons */
-
-/* Container for buttons */
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-/* Input fields */
-input[type="text"], input[type="password"] {
-  width: 250px;
-  padding: 10px;
-  margin: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-input[type="text"]:focus, input[type="password"]:focus {
-  border-color: #FF5722;
-}
-
-/* Form elements */
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-form button {
-  margin-top: 15px;
+    background-color: #e53935;
 }
