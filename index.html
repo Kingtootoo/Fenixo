@@ -1,102 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8VVWXBH142"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-8VVWXBH142');
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fenixo is a completely unblockable web proxy, with such cool themes and unblockable anything!">
     <title>Fenixo Browser</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  </head>
-  <body>
-    <div class="uptop-baraa">
-      <div class="tabaa activeaa">
-        <span class="tab-nameaa">New Tab</span>
-        <i class="fas fa-times close-btnaa"></i>
-      </div>
-      <div class="add-tabaa" title="Add tab" id="add-tabaa">
-        <i class="fa-solid fa-circle-plus"></i>
-      </div>
-    </div>
-    <div class="browser-baraa">
-      <button class="backward-buttonaa" title="Click to go back">
-        <i class="fas fa-arrow-left"></i>
-      </button>
-      <button class="forward-buttonaa" title="Click to go forward">
-        <i class="fas fa-arrow-right"></i>
-      </button>
-      <button class="reload-buttonaa" title="Reload this page">
-        <i class="fas fa-redo"></i>
-      </button>
-      <button class="home-buttonaa" title="Shortcut to helios://new-tab">
-        <i class="fas fa-home"></i>
-      </button>
-      <div class="address-baraa">
-        <i class="fas fa-lock lock-iconaa"></i>
-        <input type="text" placeholder="Enter a URL" value="Fenixo://new-tab" />
-      </div>
-      <button class="fullscreen-button" title="Enter fullscreen" onclick="toggleFullscreen()">
-        <i class="fas fa-expand"></i>
-      </button>
-      <button class="wrench-buttonaa" title="Open Fenixo AI" id="toggleSourceCode">
-        <i class="fa-solid fa-robot"></i>
-      </button>
-      <button class="settings-buttonaa" title="Shortcut to Fenixo://settings">
-        <i class="fas fa-cog"></i>
-      </button>
-      <button class="menu-buttonaa" title="More options" onclick="toggleDropdownccc()">⋮</button>
-      <div id="myDropdownccc" class="dropdown-menuccc">
-        <a href="javascript:void(0);">New Tab</a>
-        <a href="javascript:void(0);" onclick="changeTabContent('helios://settings')">Fenixo Settings</a>
-        <a href="javascript:void(0);" onclick="downloadPage()">Download Fenixo Offline&nbsp;&nbsp; <i class="fa-solid fa-download" style="font-size: 15px; color: #66ffa1;"></i></a>
-        <a href="javascript:void(0);" id="dataURL" onclick="generateDataURL()">Generate Session's Data Url</a>
-        <a href="https://github.com/Kingtootoo/Fenixo" target="_blank">Source Code&nbsp;&nbsp; <i class="fa-solid fa-up-right-from-square" style="font-size: 15px; color: #66ffa1;"></i></a>
-        <a href="https://github.com/Kingtootoo/Fenixo/issues/new" target="_blank">Submit an Issue&nbsp;&nbsp; <i class="fa-solid fa-up-right-from-square" style="font-size: 15px; color: #66ffa1;"></i></a>
-        <div class="user-idff" id="user-idff">Your User ID will appear here</div>
-      </div>
-    </div>
-    <div class="contentaa tab-contentaa activeaa">
-      <div class="Xt7Lm9Kp3R8f">
-        <p>𝙼𝚊𝚍𝚎 𝚋𝚢 Kingtootoo!</p>
-      </div>
-      <div class="top-right-boxaa">
-        <p><i class="fa-brands fa-github"></i></p>
-      </div>
-      <h2>Fenixo</h2>
-      <div class="search-baraa">
-        <div class="search-containeraa">
-          <div class="search-engine-dropdownaa" onclick="toggleDropdown()">
-            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://google.com&size=256" alt="Google" id="selected-engineaa">
-          </div>
-          <div class="dropdown-contentaa" id="engineDropdownaa">
-            <div class="status-messageaa" id="statusMessageaa">Searching</div>
-            <a href="javascript:void(0);" onclick="selectEngine('https://4get.ca/favicon.ico', '4get')" data-engine="4get">
-              <img src="https://4get.ca/favicon.ico" alt="4get"> - Search with 4get
-            </a>
-            <a href="javascript:void(0);" onclick="selectEngine('https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://google.com&size=256', 'Google')" data-engine="Google">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://google.com&size=256" alt="Google"> &nbsp;Search with Google
-            </a>
-          </div>
-        </div>
-        <input type="text" placeholder="Search the web">
-        <i class="fas fa-search search-iconaa"></i>
-      </div>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <button id="new-tab-btn" class="nav-btn">New Tab</button>
+        <button id="settings-btn" class="nav-btn">Settings</button>
+        <input type="text" id="search-bar" class="search-bar" placeholder="Search or type a URL">
     </div>
 
-    <!-- Modal and Chatbot section are here -->
+    <div id="settings-panel" class="settings-panel">
+        <h3>Settings</h3>
+        <!-- Settings options go here -->
+        <button id="close-settings" class="settings-btn">Close</button>
+    </div>
 
-    <script src="script.js"></script>
+    <iframe id="browser-frame" src="about:blank" width="100%" height="80%"></iframe>
+
     <script>
-      // Add the JavaScript code for button functionality here (from previous message)
+        // New Tab button functionality
+        document.getElementById("new-tab-btn").addEventListener("click", function() {
+            document.getElementById("browser-frame").src = "about:blank";
+        });
+
+        // Settings button functionality
+        document.getElementById("settings-btn").addEventListener("click", function() {
+            document.getElementById("settings-panel").classList.toggle("active");
+        });
+
+        // Close settings functionality
+        document.getElementById("close-settings").addEventListener("click", function() {
+            document.getElementById("settings-panel").classList.remove("active");
+        });
+
+        // Search bar functionality
+        document.getElementById("search-bar").addEventListener("keypress", function(e) {
+            if (e.key === 'Enter') {
+                let query = document.getElementById("search-bar").value;
+                if (query) {
+                    if (query.startsWith("http://") || query.startsWith("https://")) {
+                        document.getElementById("browser-frame").src = query;
+                    } else {
+                        document.getElementById("browser-frame").src = "https://www.google.com/search?q=" + query;
+                    }
+                }
+            }
+        });
     </script>
-  </body>
+
+</body>
 </html>
