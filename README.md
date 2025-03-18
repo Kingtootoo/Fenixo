@@ -1,18 +1,5 @@
 this is the orgignal Fenixo proxy slapped together soley by me, dinguschan. its a web browser proxy thing i whipped up while absolutly zonked out of my goose, and its in NO way finished. the aim is to be a replacement for dingusProxy and a replacement for your spyware ridden admin controlled browser. the idea for this was to expand upon dingusProxy's specialized static host, clientside, local, and html css js only web proxy code and unfuck the mess of code in there. i added sandboxed tabs, specialized settings and cloaking, built in threat protection and- I JUST WANNA TO CLONE CHROME. I WANNA BLATENTLY COPY CHROME SOOOOO FUCKING BAD. ITS GONNA BE 𝘽𝙀𝙏𝙏𝙀𝙍 ITS GONNA BE 𝙁𝘼𝙎𝙏𝙀𝙍 ITS GONNA TAKE YOUR ADMINS SHITASS CENSORSHIP AND FUCK. IT. UP. BEAT THAT SHIT DOWN WITH A RUSTY STEEL PIPE WRENCH MADE OF DINGUSCHAN CERTIFIED BOMB ASS CODE. (sorry.) to use Fenixo plase visit one of the OFFICIAL links below, or click the "Download Fenixo-Offline" option in the menu dropdown. you can also go through the file tree in the repository and download the "Fenixo-Offline.html" file to get the same result, and for more options check the How To Use section. If you want to look at some screenshots of Fenixo before using it just scroll down to the Screenshots section.
 
-Official Links
-https://Fenixo-browser.vercel.app/ (immediate auto updates)
-
-https://Fenixo-blue.vercel.app/ (immediate auto updates)
-
-https://Fenixo-browser.rf.gd (constant updates. if it says the site is insecure just ignore it, i probably forgot to renew the SSL certifcate)
-
-https://Fenixo-browser.w3spaces.com/ (sorry guys im broke, so only 500 requests per month :< ) (this link is VERY far behind other links because of this)
-
-https://Fenixo-browser.pages.dev/ (immediate auto updates. if it says the site is insecure just ignore it, i probably forgot to renew the SSL certifcate)
-
-https://Fenixo-browser.ct.ws (constant updates)  
-
 How To Use
 clone this repo, host on ANY site hoster, static or not, (Netlify/Render/Cloudflare Pages/Github Pages/CodeSandbox/Vercel/Heroku/etc.) and deploy the project. if you plan to deploy with Vercel, you do not have to clone this repo, and the button for quick deploy is right below these instructions
 deploy
