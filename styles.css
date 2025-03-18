@@ -1613,3 +1613,11 @@ body.show-chatbot .chatbot {
   text-decoration: underline;
   color: #007BFF;
 }
+/* Add this to show/hide the dropdown */
+.dropdown-menuccc {
+  display: none;
+}
+
+.dropdown-menuccc.show {
+  display: block;
+}
