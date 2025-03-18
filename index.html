@@ -4,55 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fenixo Browser</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Make sure styles.css is linked -->
+    <script src="script.js" defer></script> <!-- Make sure script.js is linked -->
 </head>
 <body>
+    <header>
+        <div class="button-container">
+            <button id="back-button">Back</button>
+            <button id="forward-button">Forward</button>
+            <button id="refresh-button">Refresh</button>
+            <button id="home-button">Home</button>
+            <button id="settings-button">Settings</button>
+        </div>
+    </header>
 
-    <div class="navbar">
-        <button id="new-tab-btn" class="nav-btn">New Tab</button>
-        <button id="settings-btn" class="nav-btn">Settings</button>
-        <input type="text" id="search-bar" class="search-bar" placeholder="Search or type a URL">
+    <main>
+        <input type="text" id="search-bar" placeholder="Search...">
+        <button id="search-button">Search</button>
+    </main>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal">
+        <p>Settings</p>
+        <button onclick="closeSettings()">Close</button>
     </div>
-
-    <div id="settings-panel" class="settings-panel">
-        <h3>Settings</h3>
-        <!-- Settings options go here -->
-        <button id="close-settings" class="settings-btn">Close</button>
-    </div>
-
-    <iframe id="browser-frame" src="about:blank" width="100%" height="80%"></iframe>
-
-    <script>
-        // New Tab button functionality
-        document.getElementById("new-tab-btn").addEventListener("click", function() {
-            document.getElementById("browser-frame").src = "about:blank";
-        });
-
-        // Settings button functionality
-        document.getElementById("settings-btn").addEventListener("click", function() {
-            document.getElementById("settings-panel").classList.toggle("active");
-        });
-
-        // Close settings functionality
-        document.getElementById("close-settings").addEventListener("click", function() {
-            document.getElementById("settings-panel").classList.remove("active");
-        });
-
-        // Search bar functionality
-        document.getElementById("search-bar").addEventListener("keypress", function(e) {
-            if (e.key === 'Enter') {
-                let query = document.getElementById("search-bar").value;
-                if (query) {
-                    if (query.startsWith("http://") || query.startsWith("https://")) {
-                        document.getElementById("browser-frame").src = query;
-                    } else {
-                        document.getElementById("browser-frame").src = "https://www.google.com/search?q=" + query;
-                    }
-                }
-            }
-        });
-    </script>
-
 </body>
 </html>
